@@ -1,31 +1,41 @@
 #include <stdio.h>
-int main(void){
-  int a,b,c,result;
-  printf("enter first number\n");
-  scanf("%d",&a);
-  printf("enter second number\n");
-  scanf("%d",&b);
-  printf("enter third number\n");
-  scanf("%d",&c);
-  result=comp_func(&a,&b,&c);
-  printf("the greatest of the 3 numbers is %d",result);
+ int input();
+void compare(int a, int b, int c, int *largest);
+void output(int a, int b, int c, int largest);
+
+int main();
+{
+  int a,b,c,largest;
+  a=input();
+  b=input();
+  c=input();
+  largest= compare(a,b,c,*largest);
   return 0;
 }
-comp_func(int *a,int *b,int *c)
+
+int input(){
+  int comp;
+  printf("enter the number:");
+  scanf("%d", &comp);
+  return comp;
+}
+
+void compare(int a ,int b, int c, int *largest){
+  if((a>b && a>c)){
+    *largest=a;
+    }
+  else if (b>c){
+    *largest=b;
+  }
+  else{
+    *largest=c;
+  }
+  }
+  return largest;
+}
+
+
+void output(int a, int b, int c, int largest)
 {
-  int temp;
-  if((*a>*b)&(*a>*c))
-}
-{
-  temp=*a;
-}
-else if((*b>*a)&(*b>*c))
-{
-  temp=*b;
-}
-else
-{
-  temp=*c;
-}
-return temp;
-}
+  printf("The largest of %d,%d and %d is %d",a,b,c,largest);
+  }

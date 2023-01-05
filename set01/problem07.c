@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int input_n();
-int sum_n_nos(int);
+int sum_n_nos(int n);
 void output(int n, int sum);
 
 int main() {
@@ -12,17 +12,17 @@ int main() {
   return 0;
 }
 
-int input() {
+int input_n() {
   int digit;
   printf("Enter the number till where sum has to be found \n");
   scanf("%d", &digit);
   return digit;
 }
 
-int sum_n_nos(int x) {
+int sum_n_nos(int n) {
   int add,i;
   add=0;
-  for(i=1; i<=x; i++) {
+  for(i=1; i<=n; i++) {
     add=i+add;
   }
   return add;

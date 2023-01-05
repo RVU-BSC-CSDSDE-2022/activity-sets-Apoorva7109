@@ -7,7 +7,8 @@ int main(){
   int a,b,sum;
   a=input();
   b=input();
-  output a,b,sum;
+  sum=add(a,b);
+  output(a,b,sum);
 }
 int input(){
   int number;
@@ -15,13 +16,13 @@ int input(){
   scanf("%d",&number);
   return number;
 }
-int add(int a, int b);
+int add(int a, int b)
 {
-  int s
-  s=a+b
-   return s;
+  int s;
+  s=a+b;
+  return s;
 }
-void output(int a, int b, int sum);
+void output(int a, int b, int sum)
 {
   printf("the sum of the two numbers is %d",sum);
 }
