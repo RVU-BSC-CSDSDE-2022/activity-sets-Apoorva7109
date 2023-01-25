@@ -17,9 +17,9 @@ int main(){
 void input_two_strings(char *string1, char *string2)
 {
 printf("enter the first string\n");
-scanf("%s",string1);
+scanf("%s",&string1);
 printf("enter the second string\n");
-scanf("%s",string2);
+scanf("%s",&string2);
 }
 
 int stringcompare(char *string1,char *string2){

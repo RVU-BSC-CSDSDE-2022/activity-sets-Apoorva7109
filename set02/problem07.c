@@ -7,6 +7,11 @@ float height;
 float area;
 };
 typedef struct triangle Triangle;
+
+Triangle input_triangle();
+void find_area(Triangle *t);
+void output(Triangle t);
+
 int main()
 {
   Triangle t;
@@ -15,9 +20,6 @@ int main()
    output(t);
    return 0;
 }
-struct triangle input_triangle();
-void find_area(Triangle *t);
-void output(Triangle t);
 
 Triangle input_triangle()
 {
@@ -26,13 +28,14 @@ Triangle input_triangle()
   scanf("%f", &t.base);
   printf("enter the height\n");
   scanf("%f", &t.height);
+  return t;
 }
-void find_area(Triangle t)
+void find_area(Triangle *t)
 {
        t->area=(t->base)*(t->height)*(0.5);
 }
 
 void output(Triangle t)
 {
-  printf("The area is %f", t.area);
-};
+  printf("the area of the triangle with base=%f and base=%f is %f",t.base,t.base,t.area);
+}
