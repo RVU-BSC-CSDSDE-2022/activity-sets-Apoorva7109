@@ -11,7 +11,7 @@ void output(Complex a, Complex b, Complex sum);
 
 
 int main(){
-  complex a,b,sum;
+  Complex a,b,sum;
   a=input_complex();
   b=input_complex();
   sum=add_complex(a,b);
@@ -20,7 +20,7 @@ int main(){
 }
 
 Complex input_complex(){
-  complex n;
+  Complex n;
   printf("enter the real part:\n");
   scanf("%f",&n.real);
   printf("enter the imaginary part:\n");
@@ -29,7 +29,7 @@ Complex input_complex(){
 }
 
 Complex add_complex(Complex a, Complex b){
-  complex sum;
+  Complex sum;
   sum.real=a.real+b.real;
   sum.imaginary=a.imaginary+b.imaginary;
   return sum;

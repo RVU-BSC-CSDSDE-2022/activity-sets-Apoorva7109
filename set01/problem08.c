@@ -35,6 +35,8 @@ int sum_n_array(int n, int a[n]) {
   }
   return add;
   }
+
+
 void output(int n, int a[n], int sum) {
   int i;
   for(i=0;i<n-1;i++) {

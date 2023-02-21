@@ -11,7 +11,7 @@ Complex add(Complex a, Complex b);
 Complex add_n_complex(int n, Complex c[n]);
 void output(int n, Complex c[n], Complex result);
 
-int get_n()
+int main()
 {
    int n;
    Complex result={0,0};
@@ -19,6 +19,7 @@ int get_n()
    Complex c[n];
    input_n_complex(n,c);
    result=add_n_complex(n,c);
+  output(n,c,result);
    return 0;
 }
 int get_n()
@@ -62,9 +63,8 @@ Complex add_n_complex(int n, Complex c[n])
        sum= add(sum, c[i]);
     }
 }
-void output(int n, complex c[n], complex result);
+void output(int n, Complex c[n], Complex result)
 
 {
-  printf("sum of the complex numbers:(%d) + (%di)\n", c.real, c.img);
-  return 0;
+  printf("sum of the complex numbers:(%f) + (%fi)\n", result.real,result.imaginary);
 }

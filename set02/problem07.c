@@ -37,5 +37,5 @@ void find_area(Triangle *t)
 
 void output(Triangle t)
 {
-  printf("the area of the triangle with base=%f and base=%f is %f",t.base,t.base,t.area);
+  printf("the area of the triangle with base=%f and base=%f is %f",t.base,t.height,t.area);
 }

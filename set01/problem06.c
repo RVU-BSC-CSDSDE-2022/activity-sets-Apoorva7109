@@ -3,13 +3,14 @@
 void compare(int a, int b, int c, int *largest);
 void output(int a, int b, int c, int largest);
 
-int main();
+int main()
 {
-  int a,b,c,largest;
+  int a,b,c,*largest;
   a=input();
   b=input();
   c=input();
-  largest= compare(a,b,c,*largest);
+  compare(a,b,c,&largest);
+  output(a,b,c,largest);
   return 0;
 }
 
@@ -27,11 +28,8 @@ void compare(int a ,int b, int c, int *largest){
   else if (b>c){
     *largest=b;
   }
-  else{
+  else
     *largest=c;
-  }
-  }
-  return largest;
 }
 
 

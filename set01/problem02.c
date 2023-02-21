@@ -1,9 +1,11 @@
- #include <stdio.h>
+ #include<stdio.h>
+
 int main(){
-  int a,b,sum;
-  scanf("%d",&a);
-  scanf("%d",&b);
-  sum=a+b;
-  printf("the sum is %d", sum);
+  int number1,number2,sum;
+  printf("enter the two digits");
+  scanf("%d %d",&number1,&number2);
+  //calculating sum
+  sum=number1+number2;
+  printf("%d+%d=%d",number1,number2,sum);
   return 0;
 }
